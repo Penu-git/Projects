@@ -1,0 +1,50 @@
+div{
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: auto;
+    background-color: rgb(231, 227, 220);
+    padding: 25px 25px;
+    box-shadow: 5px 5px 15px rgba(26, 25, 25, 0.39);
+
+}
+body{
+    padding: rgb(253, 251, 251);
+}
+#title{
+    color: rgba(6, 6, 245, 0.699);
+}
+#Temperature{
+    width: 50%;
+    height: 30px;
+    border-width: 2px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 30px;
+    border-radius: 4px;
+}
+label{
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: rgb(243, 37, 37);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+button:hover{
+    color: white;
+    background-color: rgb(5, 158, 69);
+}
+#decimalpoints{
+    border-radius: 5px;
+    width: 150px;
+    height: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
