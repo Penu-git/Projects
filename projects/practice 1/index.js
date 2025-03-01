@@ -1,9 +1,22 @@
 
+let time = document.getElementById('timecount');
 
-const ans = [1, 2, 3, 4, 5, 6]
 
-const squares = ans.map((elements) => Math.pow(elements, 3))
-const evenNumbers = ans.filter( (elements) => elements % 2 === 0 )
-const Total = ans.reduce((elements, accumulator) => elements + accumulator)
+function getTime(){
 
-console.log(Total)
+
+             const now = new Date()
+             const hour = now.getHours().toString().padStart(2, '0');
+             const minute = now.getMinutes().toString().padStart(2, '0');
+             const second = now.getSeconds().toString().padStart(2, '0');
+
+
+             time.textContent = `${hour}:${minute}:${second}`
+}
+getTime();
+
+function update(){
+    setInterval(getTime, 1000)
+}
+update()
+

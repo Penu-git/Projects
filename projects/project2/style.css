@@ -1,0 +1,54 @@
+#Game{
+    display: block;
+    text-align: center;
+}
+.group{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+#question{
+    font-weight: lighter;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+body{
+    padding: 250px 250px;
+}
+div{
+    background-color: lightgrey;
+    border-radius: 5px;
+    border-width: 10px;
+    border-style: dotted;
+    border-color: gold black;
+    padding: 50px 50px;
+}
+#gametext{
+    font-size: 50px;
+}
+#answer{
+    font-size: 2em;
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: blue;
+    width: 50px;
+}
+#submit{
+    padding: 10px 50px;
+    border-radius: 5px;
+    margin-top: 50px;
+    font-size: 20px;
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s;
+    border-width: 4px;
+}
+#submit:hover{
+    background-color: green;
+}
+#answerR{
+    font-size: 40px;
+}

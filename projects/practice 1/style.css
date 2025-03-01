@@ -1,0 +1,25 @@
+body{
+    margin: 0px 0px;
+    background-image: url(Capture.PNGnlk.PNG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: transparent;
+    backdrop-filter: blur(50px);
+    padding: 0%;
+}
+#timecount{
+    font-family: monospace;
+    font-size: 5rem;
+    background-color: rgba(151, 119, 119, 0.055);
+    width: 100%;
+    text-align: center;
+    color: white;
+}
