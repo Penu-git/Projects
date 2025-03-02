@@ -14,6 +14,8 @@ div{
     background-color: transparent;
     backdrop-filter: blur(50px);
     padding: 0%;
+    background-repeat: no-repeat;
+    align-content: last baseline;
 }
 #timecount{
     font-family: monospace;
