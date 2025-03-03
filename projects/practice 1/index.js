@@ -20,3 +20,40 @@ function update(){
 }
 update()
 
+
+
+
+
+
+
+
+let dividend = Number(window.prompt('Enter a dividend: '));
+let divisor = Number(window.prompt('Enter a divisor: '));
+
+let result = dividend / divisor;
+
+if (isNaN(dividend) || isNaN(divisor)){
+    throw new Error('divisor or dividend cant be a word')
+}
+else if (dividend == '' || divisor == ''){
+    throw new Error('Input a number')
+}
+else{
+    console.log(result)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
