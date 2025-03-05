@@ -110,3 +110,4 @@ catch(error){
 clearOpt.addEventListener('click', () => {
         calDisplay.value = ''
 })
+

@@ -5,23 +5,19 @@ const submit = document.getElementById('submit');
 
 submit.onclick = function(){
 
-          
-        const Dice1 =  Diceans.textContent = Math.floor(Math.random() * 5  + 1);
-        const Dice2 =  Diceans.textContent = Math.floor(Math.random() * 4  + 1);
-        const Dice3 =  Diceans.textContent = Math.floor(Math.random() * 3  + 1);
-        const Dice4 =  Diceans.textContent = Math.floor(Math.random() * 2  + 1);
-        const Dice5 =  Diceans.textContent = Math.floor(Math.random() * 1  + 2);
 
-        function getDiceValue(...Values){
-          return Values.join(', ')
-        }
+  const Dice1 = Math.floor(Math.random() * 5  + 1);
+  const Dice2 = Math.floor(Math.random() * 4  + 1);
+  const Dice3 = Math.floor(Math.random() * 3  + 1);
+  const Dice4 = Math.floor(Math.random() * 2  + 1);
+  const Dice5 = Math.floor(Math.random() * 1  + 2);
 
-        variable = Number(getDiceValue());
-      function diceValues(...answers){
-        numDice.value == 1 ? Diceans.textContent = getDiceValue(Dice1) : Diceans.textContent = '';
-        numDice.value == 2 ? Diceans.textContent = getDiceValue(Dice1, Dice2) : Diceans.textContent = '';
+   function FruitsAll(...fruits){
+           return fruits.join(', ')
+   }
+
+      Diceans.textContent = FruitsAll(Dice1, Dice2, Dice3, Dice4, Dice5)
+
         
-      }
-        diceValues()
-         
+
       }
