@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name ='viewport' description='width=device-width'>
+  <title>Login!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+
+
+    <form>
+
+      <fieldset id="fieldset">
+
+        <legend>LOGIN</legend>
+
+  <div class="display">
+      <label for='Name' class="label">Name:</label>
+      <input type='text' id="name" class="input" required>
+  </div>
+     
+  <div class="display">
+    <label class="label">Matric No:</label>
+    <input type='text' value='CYS/24/9...' class="input" id="MatricNo" required>
+  </div>
+    
+    <div class="display">
+      <label for='pass' class="label">Password:</label>
+      <input type='password' id ='Password' class="input" required>
+    </div>
+     
+      
+     <div class="display">
+      <label class="label">Retype Password:</label>
+      <input type='password' id="confirm-password" class="input" required>
+     </div>
+    
+     <div class="display" id="finish">
+      <input type='radio' required class="checkbox" name="checkbox" id="checkbox">
+      <label class="checkbox">Agree and Continue on <a href ='T&C
+        html'> Terms&Condition</a></label>
+     </div>
+
+
+           <input type='Submit' value='Login.' id='Submit' onclick="submitData()">
+        
+      </fieldset>
+
+
+
+    </form>
+
+
+   <h1 id="textDisplay"></h1>
+   <h1 id="secondText"></h1>
+  </div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

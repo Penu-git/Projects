@@ -1,3 +1,6 @@
+
+document.addEventListener('DOMContentLoaded', playersChoice)
+
 const Rock = document.getElementById('Rock');
 const Paper = document.getElementById('Paper');
 const Scissors = document.getElementById('Scissors');
@@ -154,7 +157,7 @@ Scissors.addEventListener('click', () => {
 
 
 }
-playersChoice()
+
 
 
 
