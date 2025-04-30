@@ -1,0 +1,153 @@
+/*Animation Zone!*/
+@keyframes zoomin {
+    
+    from{font-size: 10px;}
+    to{font-size: 50px;}
+}
+@keyframes bounce {
+    0%, 20%, 100% {
+        transform: translateX(0px);
+    }
+    40% {
+        transform: translateY(-60px);
+    }
+    60%{
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(25px);
+    }
+}
+/*Animation Zone!*/
+
+body{
+    background-color: rgba(77, 209, 77, 0.712);
+    border-radius: 30px;
+}
+#mobileContainerDesigner{
+    display:  flex;
+    flex-direction: column;
+    /*justify-content: center;
+    align-items: center;
+    text-align: center;*/
+    background-color: rgb(121, 139, 39);
+    border-radius: 30px;
+}
+#newestDisplay{
+    background-color: rgba(77, 209, 77, 0.712);
+    border-radius: 40px;
+    padding: 5px;
+}
+#body{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(121, 139, 39);
+    border-radius: 30px;
+}
+/*Heading Design*/
+#timeRemaining{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    border-radius: 30px;
+}
+#Life{
+    font-size: 20px;
+    color: white;
+   /* margin-left: 5px;*/
+    margin-top: 100px;
+}
+#title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    color: rgba(100, 11, 53, 0.986);
+}
+#timeDisplay{
+   /* margin-left: 0px;
+    margin-right: 5px;*/
+    margin-top: 100px;
+    font-size: 25px;
+    color: white;
+}
+#lifeNumber{
+    font-size: 20px;
+    color: white;
+}
+/*Heading Design*/
+
+.Btn{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    font-size: 40px;
+    border: none;
+    background-color: rgb(208, 70, 226);
+    margin: 20px 5px;
+    cursor: pointer;
+}
+.Btn:active{
+    background-color: rgb(168, 162, 241);
+}
+.option{
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+#result{
+    font-size: 2.5rem;
+    font-family: Arial;
+    color: red;
+    margin-top: 7px;
+}
+#PLAYER{
+    margin: 0px 0px;
+}
+#Computer{
+    margin: 0px 0px;
+}
+
+#ComScore{
+    margin-top: 0px 0px;
+}
+#PlyScore{
+    margin-top: 0px 0px;
+}
+#begin{
+    font-size: 100px;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 220px;
+    padding: 20px 40px;
+    border-radius: 30px;
+    border-width: 5px;
+    box-shadow: -10px 10px 10px rgb(255, 0, 98);
+    background-color: pink;
+    color: rgb(151, 57, 104);
+    font-family: fantasy;
+    text-shadow: 0px 0px 10px;
+    cursor: pointer;
+    animation-name: zoomin;
+    animation-duration: 10s;
+    
+}
+#begin:active{
+    background-color: rgb(238, 143, 191);
+    animation-name: zoomin;
+    animation-duration: 5s;
+}
+
+#Finalresult{
+    font-family: cursive;
+    color: white;
+}
+.finalAnimation{
+    animation: zoomin 2.5s 
+}

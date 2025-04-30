@@ -1,9 +1,8 @@
-.buttons{
-    padding: 10px 20px;
-    font-size: 28px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    margin-left: 500px;
+#shuffleButton{
+    width: 70px;
+    height: 20px;
+    margin-top: 20px;
+}
+#output{
+    font-size: 25px;
 }

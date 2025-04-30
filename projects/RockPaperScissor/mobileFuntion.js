@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', playGame)
+//document.addEventListener('DOMContentLoaded', Game)
 
 const Rock = document.getElementById('Rock');
 const Paper = document.getElementById('Paper');
@@ -12,21 +12,19 @@ const ComScore = document.getElementById('ComScore');
 let Finalresult = document.getElementById('Finalresult');
 const timeDisplay = document.getElementById('timeDisplay')
 let Life = document.getElementById('Life')
-const lifeNumber = document.getElementById('lifeNumber')
+let lifeNumber = document.getElementById('lifeNumber').textContent
 
 
 
 let timer = null
 let elapsedTime = 0
 let startTime = 0
-let val = 0
+let val = 1
 let count = 5
-let counte = 6
-let LifeCount = 5 
+let counte = 5
+let LifeCount = 4 
 let score = 1
 let Cscore = 1
-let gameIsRunning = false
-let gameHasEnded = false
 
 
 Life.textContent = `Life🤍💖: ${count}`
@@ -34,28 +32,18 @@ const arrayOptions = ['Rock', 'Paper', 'Scissors'];
 
 function GameOverDisplay(){
     ResultDisplay.textContent = 'GAME OVER!!'
-    ResultDisplay.style.fontSize = '80px'
+    ResultDisplay.style.fontSize = '78px'
     ResultDisplay.style.color = 'red'
     ResultDisplay.classList.add('finalAnimation')
     ResultDisplay.style.fontFamily = 'calibri'
 }
 function reduceLife(){
-    let lifeNumbers = lifeNumber.textContent
-    lifeNumbers = LifeCount--
-    Life.textContent = `Attempts🤍💖: ${lifeNumbers}`
+    lifeNumber = LifeCount--
+    Life.textContent = `Attempts🤍💖: ${lifeNumber}`
 }
 function enableTimeCount(){
-    if(!gameIsRunning){
-        startTime = Date.now() - elapsedTime
-        timer = setInterval(update, 10)
-        gameIsRunning = true
-    }
-}
-function timeSpent(){
-    if(gameIsRunning){
-        clearInterval(timer)
-        gameIsRunning = false
-    }
+    timer = setInterval(update, 10)
+    startTime = Date.now() - elapsedTime
 }
 function gameResult(){
     if(score > Cscore){
@@ -69,58 +57,15 @@ function gameResult(){
         }
 }
 function playerScore(){
-        PlyScore.textContent = `Player Score: ${(score++)}`
+    PlyScore.textContent = `Player Score: ${(score++)}`
 }
-function computerScore(){   
-        ComScore.textContent = `Computer Score: ${(Cscore++)}`
+function computerScore(){
+    ComScore.textContent = `Computer Score: ${(Cscore++)}`
 }
-
-
-setTimeout(() => {
-    Rock.classList.add('bounceAttention')
-}, 1000);
-setTimeout(() => {
-    Paper.classList.add('bounceAttention')
-}, 1800);
-setTimeout(() => {
-    Scissors.classList.add('bounceAttention')
-}, 2600);
-
-
-setTimeout(() => {
-    PlayerDisplay.classList.add('fontAnimation')
-}, 6500);
-setTimeout(() => {
-    ComputerDisplay.classList.add('fontAnimation')  
-}, 7300);
-setTimeout(() => {
-    PlyScore.classList.add('fontAnimation')
-}, 9800);
-setTimeout(() => {
-    ComScore.classList.add('fontAnimation')
-}, 10000);
-
-
-
-function playGame(GamePlay){
-
-    RockBtnClick()
-    PaperBtnClick()
-    ScissorsBtnClick()
-    
-    return GamePlay 
-}
-
-
-
-
 
 
 
 function RockBtnClick(){
-    
-    Rock.addEventListener('click', event => {
-        enableTimeCount()
     
         const randomOption = arrayOptions[Math.floor(Math.random() * 3)]
         PlayerDisplay.textContent = `PLAYER: ${Rock.value}`
@@ -131,6 +76,7 @@ function RockBtnClick(){
             
             }
         else if(Rock.value){
+            enableTimeCount()
             ResultDisplay.textContent = randomOption === 'Scissors' ? 'YOU WIN! 😮' : 'YOU LOSS! 😋'     
             }
     
@@ -144,7 +90,8 @@ function RockBtnClick(){
             counte --
             ResultDisplay.style.color = 'red'
             computerScore()
-            
+            val ++
+            console.log(val)
             }
         else{
             ResultDisplay.style.color = 'black'
@@ -157,21 +104,21 @@ function RockBtnClick(){
             ComputerDisplay.textContent = `Computer: `
             PlyScore.textContent = gameResult()
             ComScore.textContent = ''
-            timeSpent()
 
+            setTimeout(() => {
+                while (ResultDisplay.textContent == 'GAME OVER!!'){
+                    ResultDisplay.textContent == 'Hello you!'
+                    clearInterval(timer)
+                }
+            }, 3000);
+            
         }
-
-
-    })
 
 }
 
 
 function PaperBtnClick(){
     
-    Paper.addEventListener('click', event => {
-        enableTimeCount()
-
         const randomOption = arrayOptions[Math.floor(Math.random() * 3)]
         PlayerDisplay.textContent = `PLAYER: ${Paper.value}`
         ComputerDisplay.textContent = `Computer: ${randomOption}`
@@ -181,6 +128,7 @@ function PaperBtnClick(){
             
             }
         else if(Paper.value){
+            enableTimeCount()
             ResultDisplay.textContent = randomOption === 'Scissors' ? 'YOU LOSS! 😋' : 'YOU WIN! 😮'
             }
 
@@ -205,20 +153,21 @@ function PaperBtnClick(){
             ComputerDisplay.textContent = `Computer: `
             PlyScore.textContent = gameResult()
             ComScore.textContent = ''
-            timeSpent()
-            
-        }
 
-    })
+            setTimeout(() => {
+                while (ResultDisplay.textContent == 'GAME OVER!!'){
+                    ResultDisplay.textContent == 'Hello you!'
+                    clearInterval(timer)
+                }
+            }, 3000);
+
+        }
 
 }
 
 
 function ScissorsBtnClick(){
-
-    Scissors.addEventListener('click', event => {
-        enableTimeCount()
-
+    
         const randomOption = arrayOptions[Math.floor(Math.random() * 3)]
         PlayerDisplay.textContent = `PLAYER: ${Scissors.value}`
         ComputerDisplay.textContent = `Computer: ${randomOption}`
@@ -227,6 +176,7 @@ function ScissorsBtnClick(){
             ResultDisplay.textContent = '😌 IT IS A TIE!'
         }
         else if(Scissors.value){
+            enableTimeCount()
             ResultDisplay.textContent = randomOption === 'Paper' ? 'YOU WIN! 😮' : 'YOU LOSS! 😋'     
         }
         
@@ -252,25 +202,17 @@ function ScissorsBtnClick(){
             ComputerDisplay.textContent = `Computer: `
             PlyScore.textContent = gameResult()
             ComScore.textContent = ''
-            timeSpent()
-            console.log(timeDisplay.textContent)
+
+            setTimeout(() => {
+                while (ResultDisplay.textContent == 'GAME OVER!!'){
+                    ResultDisplay.textContent == 'Hello you!'
+                    clearInterval(timer)
+                }
+            }, 3000);
+            
         }
 
-    })
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

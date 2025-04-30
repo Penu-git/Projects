@@ -1,12 +1,130 @@
+/*Animation Zone!*/
+@keyframes zoomin {
+    from{font-size: 10px;}
+    to{font-size: 50px;}
+}
+@keyframes zoomOut {
+    from{font-size: 40px;}
+    to{font-size: 18px;}
+}
+@keyframes BoxZoom {
+    from{width: 25px;
+         height: 25px;}
+    to{width: 100px;
+       height: 100px;}
+}
+
+@keyframes fontZoom {
+    from{
+        font-size: 20px;
+    }
+    to{
+        font-size: 70px;
+    }
+}
+
+@keyframes slidein {
+    60%, 100%{
+        transform: translateX(0px);
+    }
+    0%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(0px);
+    }
+    40%{
+        transform: translateX(-30px);
+    }
+    80%{
+        transform: translateX(20px);
+    }
+}
+@keyframes bounce {
+    10%{
+        transform: translateY(-100px);
+    }
+    16%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(-70px);
+    }
+    36%{
+        transform: translateY(-0px);
+    }
+    45%{
+        transform: translateY(-30px);
+    }
+    80%{
+        transform: translateY(-0px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+/*Animation Zone!*/
+.lifeAnimation{
+    animation: colorZoom 4s;
+}
+.fontAnimation{
+    animation: zoomOut 1s;
+}
 body{
+    background-color: rgba(77, 209, 77, 0.712);
+    background-size: cover;
+    background-position: center;
+}
+
+#allContainerDesigner{
+    display:  flex;
+    flex-direction: column;
+    /*justify-content: center;
+    align-items: center;
+    text-align: center;*/
+    background-color: rgb(121, 139, 39);
+    border-radius: 20px;
+}
+#body{
     display:  flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(121, 139, 39);
-
+    background-color: rgb(146, 173, 22);
 }
+/*Heading Design*/
+#timeRemaining{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1%;
+    margin-top: 0%;
+}
+#Life{
+    font-size: 24px;
+    color: white;
+    margin-left: 20%;
+}
+#title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    color: rgba(100, 11, 53, 0.986);
+    margin-left: 0%;
+}
+#timeDisplay{
+    margin-left: 10%;
+    margin-right: 145px;
+    font-size: 45px;
+    color: white;
+}
+#lifeNumber{
+    font-size: 24px;
+    color: white;
+}
+/*Heading Design*/
+
 .Btn{
     width: 100px;
     height: 100px;
@@ -18,18 +136,23 @@ body{
     cursor: pointer;
 }
 .Btn:active{
-    background-color: rgb(168, 162, 241);
-}
-#title{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 40px;
-    color: rgba(0, 0, 0, 0.747);
-    margin: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    transition: 0.25s background-color;
+    background: rgba(42, 255, 53, 0.94) ;
 }
 #option{
     font-weight: bolder;
     font-size: 100px;
     margin-bottom: 0px;
+    
+}
+#PLAYER{
+    color: rgb(14, 33, 241);
+}
+#Computer{
+    color: white;
 }
 #result{
     font-size: 4rem;
@@ -40,16 +163,23 @@ body{
 }
 #PLAYER{
     margin: 0px 0px;
+    color:  rgba(100, 11, 53, 0.986);
+    font-family:cursive;
+    font-size: 18px;
 }
 #Computer{
     margin: 0px 0px;
+    font-family:cursive
 }
 
 #ComScore{
     margin-top: 0px 0px;
+    color:  rgba(100, 11, 53, 0.986);
 }
 #PlyScore{
     margin-top: 0px 0px;
+    color: white;
+    font-size: 18px;
 }
 #begin{
     font-size: 100px;
@@ -81,8 +211,18 @@ body{
     font-family: cursive;
     color: white;
 }
-@keyframes zoomin {
-    
-    from{opacity: -3;}
-    to{opacity: 1;}
+.finalAnimation{
+    animation: zoomin 2.5s 
+}
+.finalAnimation2{
+    animation: zoomin 1.3s 
+}
+.bounceAttention{
+    animation: bounce 6s;
+}
+.boxAnimation{
+    animation: BoxZoom 4s ;
+}
+.slideIn{
+    animation: slidein 2.5s;
 }

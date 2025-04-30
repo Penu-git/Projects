@@ -1,0 +1,79 @@
+
+@keyframes moveSide { 
+    from{
+        transform: rotate3d(20deg, 60deg, 120deg);
+    }
+    to{
+        transform: rotate3d(30deg, 70deg, 180deg);
+    }
+}
+.rotate{
+    animation: moveSide infinite;
+    color: red;
+}
+body{
+    background-color: blue;
+}
+
+#passwordGeneratorCont{
+    background-color: lightgreen;
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 170px;
+}
+.checkbox{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+label{
+    font-size: 20px;
+}
+#button{
+    border-radius: 20px;
+    padding: 5px;
+    width: 150px;
+    margin-top: 20px;
+    height: 30px;
+    background-color: grey;
+    cursor: pointer;
+    color: white;
+}
+#button:active{
+    background-color: rgb(224, 222, 222);
+    color: black;
+}
+#passwordLenght{
+    width: 100px;
+    height: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+}
+#passwordDisplay{
+    border-style: groove;
+    height: 25px;
+    margin-top: 20px;
+    color: red;
+    padding: 6px;
+    font-size: 21px;
+    overflow: hidden;
+    
+}
+#hamburgerMenu{
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 1300px;
+    margin-top: 20px;
+}
+.toggleButton{
+    width: 30px;
+    height: 7px;
+    border-radius: 10px;
+    border-width: 0px;
+    margin: 1px;
+    cursor: pointer;
+}

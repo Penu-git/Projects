@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    background-color: blueviolet;
+}
+#searchArea{
+    margin: 250px;
+    margin-top: 100px;
+}
+#searchBox{
+    margin: 20px;
+    width: 250px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    border-color: red;
+    cursor: pointer;
+    padding-left: 10px;
+}
+#searchButton{
+    width: 80px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: chocolate;
+    color: white;
+    font-size: 20px;
+}
+#searchButton:active{
+    background-color: rgb(199, 84, 2)
+}
+#resultDisplay{
+    border-style: groove;
+    border-width: 5px;
+    background-color: rgb(51, 50, 50);
+    margin-left: 20px;
+    margin-right: 220px;
+    color: white;
+    font-size: 20px;
+    font-family: Times;
+    overflow: hidden;
+    padding: 5px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-items: left;
+}
+#suspects{
+    border-style: groove;
+    border-radius: 10px;
+    background:   rgb(248, 245, 245);
+    padding: 10px;
+    margin: 20px;
+    width: 200px;
+}
+h1{
+    font-family: monospace;
+    color: rgb(19, 19, 19);
+    text-shadow: -7px 4px 2.5px  rgb(100, 100, 247);
+    font-size: 20px;
+    font-weight: bold;
+}
+#SUSPECTS{
+    font-size: 26px;
+}

@@ -55,40 +55,24 @@ let textDisplay = document.getElementById('textDisplay')
 let secondText = document.getElementById('secondText')
 
 
-
 try{
 
 function submitData(){
     
 
-    if(NameText = ''){
-        textDisplay.textContent = 'pls complete the fields above!'
-    }
-    else if(MatricNo = ''){
-        textDisplay.textContent = 'pls complete the fields above!'
-    }
-    else if(Password = ''){
-        textDisplay.textContent = 'pls complete the fields above!'
-    }
-    else if(RetypePassword = ''){
-        textDisplay.textContent = 'pls complete the fields above!'
-    }
-    else if(!checkbox.checked){
+    if(MatricNo == 'CYS/24/9182'){
         textDisplay.textContent = 'pls complete the fields above!'
     }
     else {
-        function checkPassword(){
-            if(!(Password.length == RetypePassword.length)){
-                secondText.textContent = 'password do not match'
-            }
-            else{
-                secondText.textContent = 'password match'
-            }
-        }
         checkPassword()
     }
 
-    
+}
+
+function checkPassword(){
+    if(Password.length !== RetypePassword.length){
+        secondText.textContent = 'password do not match'
+    }
 
 }
 

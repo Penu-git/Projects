@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password...🔑🔑🔑</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<div id="hamburgerMenu" class="toggleButtonClass">
+    <button class="toggleButton"></button>
+    <button class="toggleButton"></button>
+    <button class="toggleButton"></button>
+</div>
+
+
+<div id="passwordGeneratorCont">
+
+    <div id="upperCaseLabel">
+        <input type="checkbox" id="upperCaseChars" class="checkbox">
+        <label for="upperCaseChars">include UpperCase Characters</label>
+    </div>
+    
+    <div id="lowerCaseLabel">
+        <input type="checkbox" id="lowerCaseChars" class="checkbox">
+        <label for="lowerCaseChars">include lowerCase Characters</label>
+    </div>
+    
+    <div id="numberLabel">
+        <input type="checkbox" id="numberChars" class="checkbox">
+        <label for="numberChars">include Number Characters</label>
+    </div>
+    
+    <div id="symbolLabel">
+        <input type="checkbox" id="symbolChars" class="checkbox">
+        <label for="symbolChars">include Symbol Characters</label>
+    </div>
+
+    <div id="passwordDisplay" >
+        
+    </div>
+    
+    <div >
+        <input type="number" id="passwordLenght" max="16" min="5">
+        <button id="button">Generate Password</button>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

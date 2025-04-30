@@ -8,13 +8,16 @@
 */
 
 @keyframes bounce {
-    0%, 20%, 80%, 100% {
+    0%, 20%, 100% {
         transform: translateX(0px);
     }
     40% {
         transform: translateY(-25px);
     }
-    60% {
+    60%{
+        transform: translateY(-20px);
+    }
+    80% {
         transform: translateY(25px);
     }
 }
@@ -88,8 +91,9 @@ img.displaySlide{
     height: 500px;
   /*  animation: fadeIn 2s forwards;
     animation: bounce 2s infinite;*/
-    animation:  fadeIn 5s;
+    animation:  bounce 15s;
     /*animation: bounce 2s infinite;*/
+    animation-delay: 0ms;
 }
 .slides button{
     position: absolute;
@@ -174,7 +178,7 @@ body{
     font-family: monospace;
     background-color: rgba(0, 0, 255, 0.185);
     margin: 15px;
-    animation: bounce 5s infinite;
+    animation: bounce 5s;
 }
 #Submit:hover{
     background-color: rgba(0, 0, 255, 0.473);
